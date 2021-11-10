@@ -2,11 +2,9 @@ import os
 
 words = []
 
-if not(os.path.exists('./1103/data/sample.txt')):
-    open("./1103/data/sample.txt", mode='w', buffering=-1, encoding=None, errors=None, newline=None, closefd=True, opener=None)
-
-with open("./1103/data/sample.txt", mode='r') as f:
-    words = f.read().splitlines()
+if os.path.exists('./1103/data/sample.txt'):
+    with open("./1103/data/sample.txt", mode='r') as f:
+        words = f.read().splitlines()
 f.close()
 
 while True:
